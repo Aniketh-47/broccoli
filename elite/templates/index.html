@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block title %} {% endblock title %} {% block body%}
+<style>
+  body {
+    padding: 15px;
+  }
+</style>
+
+<!-- write your code here .. -->
+
+<div class="container" id="nk" style="margin-left: 15%">
+  <table>
+    <tr>
+      <td><img src="../static/bg.gif" alt="" /></td>
+      <td>
+        <table>
+          <tr>
+            <button
+              type="button"
+              class="btn btn-outline-info"
+              style="margin-left: 50%; width: 190%"
+            >
+              <a
+                style="text-decoration: none; color: aliceblue"
+                href="/register"
+                >Register</a
+              >
+            </button>
+          </tr>
+          <hr />
+          <tr style="line-height: 2em">
+            <button
+              type="button"
+              class="btn btn-outline-info"
+              style="margin-left: 50%; width: 190%"
+            >
+              <a style="text-decoration: none; color: aliceblue" href="/login"
+                >Login</a
+              >
+            </button>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="container" style="margin-left: 40%"></div>
+
+<script>
+  function reg() {
+    window.open("register.html");
+  }
+
+  function log() {
+    window.open("login.html");
+  }
+</script>
+
+{% endblock body %}
