@@ -1,0 +1,60 @@
+ {% extends 'base.html' %}
+  {% block title %}
+
+
+  {% endblock title %}
+  {% block body %}
+ <!-- write code here ... -->
+<style>
+    body{
+     padding :15px;
+    }
+  
+
+    .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+</style>
+    <div class="container-fluid md-4">
+        <center>
+            <h1 align="center" style="color:white">ToY@pp WEBSITE</h1>
+        </center>
+    </div>
+    <div class="container">
+
+<form class="form-signin" method="POST">
+    {% csrf_token %}
+    {% if message %}
+     <div class="alert alert-{{class}}">
+         {{message}}
+     </div>
+    {%  endif %}
+    <h1 class="h3 mb-3 fw-normal" align="center" style="color:white">Please sign up</h1>
+     <div class="form-floating">
+      <input type="text" class="form-control" name="uname" required>
+      <label for="floatingInput">Username</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingPassword" placeholder="Email" name="email">
+      <label for="floatingPassword">Email</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="+91**********" required name="mobile">
+      <label for="floatingInput">Mobile Number</label>
+    </div>
+
+
+    <br>
+
+    <button class="w-100 btn btn-lg btn-outline-primary" type="submit" >Submit</button>
+    {% comment %} <p class="mt-5 mb-3 text-muted">© 2019–2023 @KlsGit</p> {% endcomment %}
+  </form>
+    </div>
+
+
+ {% endblock body %}
